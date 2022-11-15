@@ -20,6 +20,18 @@
     <footer>
         footer
     </footer>
+<script>
+    function logCookies(cookies) {
+  for (const cookie of cookies) {
+    console.log(cookie.value);
+  }
+}
 
+browser.cookies
+  .getAll({
+    name: "favorite-color",
+  })
+  .then(logCookies);
+</script>
 </body>
 </html>
